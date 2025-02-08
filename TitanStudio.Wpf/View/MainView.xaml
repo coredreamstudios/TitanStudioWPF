@@ -1,0 +1,22 @@
+﻿<Window x:Class="TitanStudio.Wpf.View.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TitanStudio.Wpf.View" 
+        xmlns:viewmodel="clr-namespace:TitanStudio.Core.ViewModel;assembly=TitanStudio.Core" 
+        d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
+        mc:Ignorable="d"
+        Title="TitanSTUDIO Alpha Build 01" Height="450" Width="800"
+        ThemeMode="Dark"> 
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="5,5,5,5">
+            <Button Command="{Binding TestCommand}" 
+                    Content="Test Button" Margin="5,5,5,5"/>
+            
+            <Button Command="{Binding LaunchMatchRulesEditorCommand}" 
+                    Content="Launch Match Rules Editor"  Margin="5,5,5,5"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
