@@ -29,6 +29,6 @@ public partial class MainViewModel : ObservableObject, IMainViewModel
     [RelayCommand]
     public void LaunchMatchRulesEditor()
     {
-        var view = _serviceProvider.GetRequiredService<MatchRulesEditorView>();   
+      //  var view = _serviceProvider.GetRequiredService<MatchRulesEditorView>();   
     }
 }

@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="TitanStudio.Wpf.Controls.NumericUpDown"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TitanStudio.Wpf.Controls"
+             mc:Ignorable="d"
+             x:Name="NumericUpDownControl"
+             d:DesignHeight="30" d:DesignWidth="100">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Column="0"
+                 Text="{Binding Value, ElementName=NumericUpDown, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 HorizontalAlignment="Center"
+                 PreviewTextInput="NumberOnly"
+                 MaxLength="6"/>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <Button Content="▲" Click="IncreaseValue" Padding="4,1" Height="12" />
+            <Button Content="▼" Click="DecreaseValue" Padding="4,1" Height="19" />
+        </StackPanel>
+    </Grid>
+</UserControl>

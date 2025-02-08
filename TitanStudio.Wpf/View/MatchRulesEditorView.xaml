@@ -5,13 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TitanStudio.Wpf.View"
         xmlns:viewmodel="clr-namespace:TitanStudio.Core.ViewModel;assembly=TitanStudio.Core" 
+        xmlns:controls="clr-namespace:TitanStudio.Wpf.Controls"
         mc:Ignorable="d"
         Title="Match Rules Editor" Height="450" Width="800">
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="10,10,10,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Margin="10,10,10,10" Grid.Row="0" Grid.ColumnSpan="1">
+            <TextBlock Text="Match ID" Margin="5" />
+            <TextBox Name="MatchId" />
+            <TextBlock Text="Match Description" Margin="5" />
+            <TextBox Name="MatchDescription" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="10,10,10,10" Grid.Row="2">
+            <CheckBox Content="Enable Submission Only" />
             <CheckBox Content="Enable Disqualifiations" />
             <CheckBox Content="Enable Hell In A Cell" />
             <CheckBox Content="Enable Rope Breaks (Automatic)" />
+            <CheckBox Content="Enable Cage Door Exit" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="10,10,10,10" Grid.Row="2" Grid.Column="1">
+            <CheckBox Content="Show Commenatators" />
+            <CheckBox Content="Show Referee" />
+            <CheckBox Content="Show Ringside Crew" />
         </StackPanel>
     </Grid>
 </Window>

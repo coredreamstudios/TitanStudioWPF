@@ -20,7 +20,7 @@ public partial class App : Application
         ConfigureServices(serviceCollection);
         _serviceProvider = serviceCollection.BuildServiceProvider();
 
-        var mainWindow = _serviceProvider.GetRequiredService<MainView>();
+        var mainWindow = _serviceProvider.GetRequiredService<MatchRulesEditorView>();
         mainWindow.Show();
         
     }
